@@ -20,7 +20,7 @@ simlationId: o ID da simulação, para obter diferentes logs em simulações que
 Para executar o programa é necessário seguir o seguintes passos:
 
 1. Acessar a pasta ns-3.29
-2. Mover a pasta 'dash-migration' para a pasta 'src' do ns-3.29 
+2. Mover a pasta 'Fog4Ms' para a pasta 'src' do ns-3.29 
 3. Habilitar os testes e exemplos através do comando:
 
   ./waf configure --enable-tests --enable-examples
@@ -32,16 +32,16 @@ Para executar o programa é necessário seguir o seguintes passos:
 
 5. Rodar o script dash-migration através do comando:
 
-  ./waf --run=dash-migration-v2
+  ./waf --run=dash-ms-migration
 
 6. Alternativamente pode-se rodar o script dash-migration, localizado na pasta src do ns-3.29, passando os parâmetros necessários descritos anteriormente. Exemplo:
 
-  ./waf --run="dash-migration --simulationId=1 --numberOfClients=3 --adaptationAlgo=panda --segmentDuration=2000000 --segmentSizeFile=src/dash-migration/dash/segmentSizesBigBuck1A.txt"
+  ./waf --run="dash-ms-migration --simulationId=1 --numberOfClients=3 --adaptationAlgo=panda --segmentDuration=2000000 --segmentSizeFile=src/Fog4MS/dash/segmentSizesBigBuck1A.txt"
   
 7. A partir do diretorio do Ns3 pode-se chamar o script em python para se fazer multiplas simulações. Exemplo:
 
-  python3 src/dash-migration/Run.py dash-migration-v2 -i simulationId -s seedValue -r 17 -args politica=0 -args numberOfClients=32 -args segmentSizeFile=src/dash-migration/dash/segmentSizesBigBuck90.txt -ug -g src/dash-migration/graficos.py -rargs runs=r -cargs numberOfClients=c -gargs seg=segmentSizesBigBuck90.txt
-
+  python3 src/Fog4MS/Run.py dash-ms-migration -i simulationId -s seedValue -r 17 -args politica=0 -args numberOfClients=32 -args segmentSizeFile=src/Fog4MS/dash/segmentSizesBigBuck90.txt
+  
 ## Resultados
 Os resultados podem ser obtidos através dos logs dentro da pasta "dash-log-files"
 
